@@ -72,10 +72,10 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sunt dicta voluptatem deserunt deleniti ab vel unde velit sit animi!</p>
+            <p>Anonymous is a decentralized international activist / collective / hacking movement known for opposing governments, companies and systems of control. This work shows that they are all around us, because Anonymous is everywhere, and they are nowhere. They are legions, have learned to control reactions to human emotions, and are not subject to fiat control and corruption.</p>
           </div>
           <div class="col-4">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius alias nobis, veniam tempore cumque totam velit dolores possimus quis reprehenderit nulla asperiores dolor facilis doloremque?</p>
+            <p>As a reproduction of this work may only be the appearance of a digital NFT that illustrates the existence of anonymity, the owner believes, and we agree, that this work is important enough to be preserved, reproduced, and generally available to the public. We appreciate your support - being an important part of the conservation process and perpetuating this knowledge.</p>
           </div>
         </div>
       </div>
@@ -176,23 +176,32 @@
             <div class="col">
                 <h2>Contact Me</h2>
             </div>
+
         </div>
         <div class="row justify-content-center">
             <div class="col-md-5">
-                <form>
+                <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                    <strong>Anonvdigital respont!</strong> thank you for sending response to us.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                <form name="subcrybe-me">
                     <div class="mb-3">
                       <label for="name" class="form-label">You Name</label>
-                      <input type="text" class="form-control" id="name" aria-describedby="name">
+                      <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
                      </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="email">
+                        <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
                        </div>
                        <div class="mb-3">
                         <label for="mesage" class="form-label">Mesage</label>
-                        <textarea class="form-control" id="mesage" rows="3"></textarea>
+                        <textarea class="form-control" id="mesage" rows="3" name="mesage"></textarea>
                       </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-send ">Submit</button>
+                    <button class="btn btn-primary btn-sender d-none" type="button" disabled>
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        Sender...
+                      </button>
                   </form>
             </div>
         </div>
@@ -210,5 +219,29 @@
     </footer>
       <!--End Footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-  </body>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxWY7-bLZd-Q4BwdHW0tI_CTxF9-idOs_aHbFVRrN1t-BR2HzeOX8LtTTcLluaL7ZKrHg/exec'
+       const btnsend = document.querySelector('.btn-send');
+       const btnsender = document.querySelector('.btn-sender');
+       const myalert = document.querySelector('.my-alert');
+        const form = document.forms['subcrybe-me']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          // sender submit
+          btnsender.classList.toggle('d-none');
+          btnsend.classList.toggle('d-none');
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                btnsender.classList.toggle('d-none');
+                btnsend.classList.toggle('d-none');
+                myalert.classList.toggle('d-none');
+                //form reset
+                form.reset();
+                console.log('Success!', response);
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
 </html>
