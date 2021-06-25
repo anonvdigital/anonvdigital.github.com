@@ -1,305 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="twitter:creator" content="@anonvdigitalart" />
-    <meta name="twitter:title" content="Anonvdigital" />
-    <meta name="twitter:description" content="Official NFT ART - ONLY on WAX - the world's leading decentralized digital entertainment and video game network." />
-    <meta property="og:url" content="https://anonvdigital.shop" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="AnonVdigitalalArt" />
-    <meta property="og:description" content="Official NFT ART - ONLY on WAX - the world's leading decentralized digital entertainment and video game network." />
-    <title>AnonVdigitalArt</title>
-    
-    
-    
-    
-    <!--icon-->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-     <!--end icon-->
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="tr_TR">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>anonvdigital</title>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=3.4.2'></script>
+<script type='text/javascript'>
+$(function() {
+var baslangic = "  root-admin~$:"; 
+var d = 0;
+var text1 = "";
+var depo = ""; 
+var b = baslangic.length; 
+var text = "";
+var repeat = 1; 
+var ch = 0; 
+var item = 0; 
+var items = $('#caption li').length;
+var time = 1000;
+var delay = 80; 
+var wait = 100; 
+$('#showCaption').css('width', ($('#caption').width() + 20));
+function tickInterval() {
+if(item < items) {
+text = $('#caption li:eq('+item+')').text();
+type(depo+baslangic+text+"\n",baslangic+text+"\n");
+text = null;
+var tick = setTimeout(tickInterval, time);
+} else {
+if(repeat == 1) {
+ch = 0;
+item = 0;
+depo = "";
+b=baslangic.length;
+tickInterval();
+} else {
+clearTimeout(tick);
+}
+}
+}
+ 
+function type(text,text1) {
+time = delay;
+$('#show').html(text.substr(0, b++));
+ch++;
+if(ch > text1.length) {
+item++;
+ch = 0;
+time = wait;
+if(d==0)
+depo += text1;
+}
+}
+ 
+var tick = setTimeout(tickInterval, time);
+});
+</script>
+<style type="text/css">
+ 
 
-    <!-- Css-->
-    <link href="css/style.css" rel="stylesheet" />
-    <!--Css end-->
+#caption {
+display: none;
+}
+#show{
+  border: 5px solid green;
+  padding: 10px;
+  margin: 20px;
+width:400px;
+font-family:Courier New;
+font-size:12px;
+color:#00FF00;
+white-space:pre;
+font-weight:bold;
+
+min-width:550px;
+}
+
+#about {
+font-size:100px;
+color:#FFFFFF;
+
+}
+body {
+background-image: url('https://gateway.pinata.cloud/ipfs/QmTE86WFwgeqTwgVJk6auAbUZYtY74metJSBqP1AfYMa9k');
+  background-repeat: no-repeat;
+  background-position: ceter;
+}
+
+</style>
+
+  
+  
    
-  </head>
-  <body id="home">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">AnonVdigital Art</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#colection">Colection</a>
-            <a class="nav-link" href="#contact">Contact</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar End -->
+</head>
+<body >
+<ul id="about"><center><b>AnonVdigital Art</b></center></ul>
+<div><center>
+ <button id="b1"><a href="https://wax.atomichub.io/market?collection_name=anonvdigital" target="_blank">Atomic Market</a></button>
+ <button id="2"><a href="https://neftyblocks.com/c/anonvdigital/" target="_blank">Drop</a></button>
+ <button id="3"><a href="https://twitter.com/anonvdigitalart" target="_blank">Twitter</a></button>
+ <button id="4"><a href="https://t.me/anonvdigital" target="_blank">Telegram</a></button>
 
-    <!-- Jumbotron-->
-    <section class="jumbotron text-center text-light">
-      <img src="img/QmTHsX1DBnYx68Ys831eQXqyL49UkAJ6UvLxDgTnAZK9qw.png" alt="AnonVdigital" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4 fw-bold">ANONVDIGITAL</h1>
-      <p class="lead">Official NFT ART - ONLY on WAX - the world's leading decentralized digital entertainment and video game network.</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffff"
-          fill-opacity="1"
-          d="M0,224L9.6,202.7C19.2,181,38,139,58,144C76.8,149,96,203,115,208C134.4,213,154,171,173,128C192,85,211,43,230,37.3C249.6,32,269,64,288,106.7C307.2,149,326,203,346,208C364.8,213,384,171,403,149.3C422.4,128,442,128,461,160C480,192,499,256,518,240C537.6,224,557,128,576,112C595.2,96,614,160,634,176C652.8,192,672,160,691,165.3C710.4,171,730,213,749,197.3C768,181,787,107,806,96C825.6,85,845,139,864,133.3C883.2,128,902,64,922,58.7C940.8,53,960,107,979,133.3C998.4,160,1018,160,1037,176C1056,192,1075,224,1094,202.7C1113.6,181,1133,107,1152,74.7C1171.2,43,1190,53,1210,101.3C1228.8,149,1248,235,1267,256C1286.4,277,1306,235,1325,213.3C1344,192,1363,192,1382,165.3C1401.6,139,1421,85,1430,58.7L1440,32L1440,320L1430.4,320C1420.8,320,1402,320,1382,320C1363.2,320,1344,320,1325,320C1305.6,320,1286,320,1267,320C1248,320,1229,320,1210,320C1190.4,320,1171,320,1152,320C1132.8,320,1114,320,1094,320C1075.2,320,1056,320,1037,320C1017.6,320,998,320,979,320C960,320,941,320,922,320C902.4,320,883,320,864,320C844.8,320,826,320,806,320C787.2,320,768,320,749,320C729.6,320,710,320,691,320C672,320,653,320,634,320C614.4,320,595,320,576,320C556.8,320,538,320,518,320C499.2,320,480,320,461,320C441.6,320,422,320,403,320C384,320,365,320,346,320C326.4,320,307,320,288,320C268.8,320,250,320,230,320C211.2,320,192,320,173,320C153.6,320,134,320,115,320C96,320,77,320,58,320C38.4,320,19,320,10,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- jumbotron end -->
+ </center>
+ </div>
+ <center><ul id="caption">
 
-    <!--About-->
-    <section id="about">
-      <div class="container">
-        <div class="row text-center mb-5">
-          <div class="col">
-            <h2>About Me</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-4">
-            <p>Anonymous is a decentralized international activist / collective / hacking movement known for opposing governments, companies and systems of control. This work shows that they are all around us, because Anonymous is everywhere, and they are nowhere. They are legions, have learned to control reactions to human emotions, and are not subject to fiat control and corruption.</p>
-          </div>
-          <div class="col-4">
-            <p>As a reproduction of this work may only be the appearance of a digital NFT that illustrates the existence of anonymity, the owner believes, and we agree, that this work is important enough to be preserved, reproduced, and generally available to the public. We appreciate your support - being an important part of the conservation process and perpetuating this knowledge.</p>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#6c757d"
-          fill-opacity="1"
-          d="M0,160L12,160C24,160,48,160,72,160C96,160,120,160,144,186.7C168,213,192,267,216,240C240,213,264,107,288,74.7C312,43,336,85,360,85.3C384,85,408,43,432,74.7C456,107,480,213,504,234.7C528,256,552,192,576,170.7C600,149,624,171,648,170.7C672,171,696,149,720,154.7C744,160,768,192,792,208C816,224,840,224,864,229.3C888,235,912,245,936,218.7C960,192,984,128,1008,128C1032,128,1056,192,1080,218.7C1104,245,1128,235,1152,234.7C1176,235,1200,245,1224,234.7C1248,224,1272,192,1296,160C1320,128,1344,96,1368,80C1392,64,1416,64,1428,64L1440,64L1440,320L1428,320C1416,320,1392,320,1368,320C1344,320,1320,320,1296,320C1272,320,1248,320,1224,320C1200,320,1176,320,1152,320C1128,320,1104,320,1080,320C1056,320,1032,320,1008,320C984,320,960,320,936,320C912,320,888,320,864,320C840,320,816,320,792,320C768,320,744,320,720,320C696,320,672,320,648,320C624,320,600,320,576,320C552,320,528,320,504,320C480,320,456,320,432,320C408,320,384,320,360,320C336,320,312,320,288,320C264,320,240,320,216,320C192,320,168,320,144,320C120,320,96,320,72,320C48,320,24,320,12,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!--End About-->
-
-    <!--Colection-->
-    <section id="colection">
-      <div class="container">
-        <div class="row text-center text-light mb-3">
-          <div class="col">
-            <h2>NFT Colection</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <div class="card bg-secondary" style="width: 18rem">
-              <img src="https://resizer.atomichub.io/images/v1/preview?ipfs=QmdBCUt3keDvvrLqP6yV8ZnbZQywzxTAj48NLehW1QvBoR&size=370" class="card-img-top" alt="Card1" />
-              <div class="card-body text-center">
-                <p class="card-text"><a href="https://wax.atomichub.io/market?collection_name=anonvdigital&schema_name=promo&template_id=57372" class="btn btn-dark">Anon digital Art - P</a></p>
-              </div>
-            </div>
-          </div>
-
-          <!--img2-->
-          <div class="col-md-4 mb-3">
-            <div class="card bg-secondary" style="width: 18rem">
-              <img src="https://resizer.atomichub.io/images/v1/preview?ipfs=QmXZ7h7gB1wSmjqF5Ru1bcASNEKAajYPQQTBg475h7fPs4&size=370" class="card-img-top" alt="Card2" />
-              <div class="card-body text-center">
-                <a href="https://wax.atomichub.io/market?collection_name=anonvdigital&schema_name=card&template_id=64328" class="btn btn-dark">CARD HOLDER R</a>
-                </p>
-            </div>
-            </div>
-          </div>
-
-          <!--img3-->
-          <div class="col-md-4 mb-3">
-            <div class="card bg-secondary" style="width: 18rem">
-              <img src="https://ipfs.io/ipfs/QmVx4vduzMaAtGoUo1y4NYZEyKRSXQfTcvcjUuyuaMiZDR" class="card-img-top" alt="Card3" />
-              <div class="card-body">
-                <p class="card-text text-center">
-                  <a href="https://wax.atomichub.io/market?collection_name=anonvdigital&schema_name=card&template_id=63444" class="btn btn-dark">Lucky Child</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <p></p>
-          <!--img4-->
-          <div class="col-md-4 mb-3">
-            <div class="card bg-secondary" style="width: 18rem">
-              <img src="https://resizer.atomichub.io/images/v1/preview?ipfs=QmUwmbbVSwVVCTkhTzi9nqWWAKMUQeZYv8AN8PkmSHGp51&size=370" class="card-img-top" alt="Card4" />
-              <div class="card-body">
-                <p class="card-text text-center">
-                  <a href="https://wax.atomichub.io/market?collection_name=anonvdigital&schema_name=card&template_id=87453" class="btn btn-dark">Blue wizard - Diamond</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <!--img5-->
-          <div class="col-md-4 mb-3">
-            <div class="card bg-secondary" style="width: 18rem">
-              <img src="https://ipfs.atomichub.io/ipfs/QmR2Fu5xtQs6EjPvPEVzNSs6c9AVhgttFtkLhQHGcdtEqv" class="card-img-top" alt="Card5" />
-              <div class="card-body text-center">
-                <a class="btn btn-success" href="https://wax.atomichub.io/drops/13546" role="button">Buy Pack Drops</a>
-                <a href="https://wax.atomichub.io/market?collection_name=anonvdigital&schema_name=pack&template_id=83037" class="btn btn-dark">Chandel Holder Pack</a>
-                <a class="btn btn-primary" href="https://neftyblocks.com/c/anonvdigital/packs" role="button">Open Pack</a>
-              
-                
-              </p>
-          </div>
-            </div>
-          </div>
-          <!--img6-->
-          <div class="col-md-4 mb-3">
-            <div class="card bg-secondary" style="width: 18rem">
-              <img src="https://resizer.atomichub.io/images/v1/preview?ipfs=QmSZyqXkTWywqhZo8UpSgEHxtKJ8ueRTBixvPofzfn4KC5&size=370" class="card-img-top" alt="Card6" />
-              <div class="card-body text-center">
-                <a href="https://wax.atomichub.io/market?collection_name=anonvdigital&schema_name=card&template_id=64185" class="btn btn-dark">CARD HOLDER C</a>
-            </p>
-        </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,32L13.3,37.3C26.7,43,53,53,80,64C106.7,75,133,85,160,112C186.7,139,213,181,240,176C266.7,171,293,117,320,128C346.7,139,373,213,400,240C426.7,267,453,245,480,224C506.7,203,533,181,560,186.7C586.7,192,613,224,640,208C666.7,192,693,128,720,117.3C746.7,107,773,149,800,144C826.7,139,853,85,880,64C906.7,43,933,53,960,58.7C986.7,64,1013,64,1040,80C1066.7,96,1093,128,1120,117.3C1146.7,107,1173,53,1200,64C1226.7,75,1253,149,1280,176C1306.7,203,1333,181,1360,170.7C1386.7,160,1413,160,1427,160L1440,160L1440,320L1426.7,320C1413.3,320,1387,320,1360,320C1333.3,320,1307,320,1280,320C1253.3,320,1227,320,1200,320C1173.3,320,1147,320,1120,320C1093.3,320,1067,320,1040,320C1013.3,320,987,320,960,320C933.3,320,907,320,880,320C853.3,320,827,320,800,320C773.3,320,747,320,720,320C693.3,320,667,320,640,320C613.3,320,587,320,560,320C533.3,320,507,320,480,320C453.3,320,427,320,400,320C373.3,320,347,320,320,320C293.3,320,267,320,240,320C213.3,320,187,320,160,320C133.3,320,107,320,80,320C53.3,320,27,320,13,320L0,320Z"></path></svg>
-    </section>
-    <!--End colection-->
-
-    <!--Contact-->
-<section id="contact">
-    <div class="container">
-        <div class="row text-center mb-3">
-            <div class="col">
-                <h2>Contact Me</h2>
-            </div>
-
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-5">
-                <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                    <strong>Anonvdigital respont!</strong> thank you for sending response to us.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                <form name="subcrybe-me">
-                    <div class="mb-3">
-                      <label for="name" class="form-label">You Name</label>
-                      <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
-                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
-                       </div>
-                       <div class="mb-3">
-                        <label for="mesage" class="form-label">Mesage</label>
-                        <textarea class="form-control" id="mesage" rows="3" name="mesage"></textarea>
-                      </div>
-                    <button type="submit" class="btn btn-primary btn-send ">Submit</button>
-                    <button class="btn btn-primary btn-sender d-none" type="button" disabled>
-                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                        Sender...
-                      </button>
-                  </form>
-            </div>
-        </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6c757d" fill-opacity="1" d="M0,32L13.3,37.3C26.7,43,53,53,80,64C106.7,75,133,85,160,112C186.7,139,213,181,240,176C266.7,171,293,117,320,128C346.7,139,373,213,400,240C426.7,267,453,245,480,224C506.7,203,533,181,560,186.7C586.7,192,613,224,640,208C666.7,192,693,128,720,117.3C746.7,107,773,149,800,144C826.7,139,853,85,880,64C906.7,43,933,53,960,58.7C986.7,64,1013,64,1040,80C1066.7,96,1093,128,1120,117.3C1146.7,107,1173,53,1200,64C1226.7,75,1253,149,1280,176C1306.7,203,1333,181,1360,170.7C1386.7,160,1413,160,1427,160L1440,160L1440,320L1426.7,320C1413.3,320,1387,320,1360,320C1333.3,320,1307,320,1280,320C1253.3,320,1227,320,1200,320C1173.3,320,1147,320,1120,320C1093.3,320,1067,320,1040,320C1013.3,320,987,320,960,320C933.3,320,907,320,880,320C853.3,320,827,320,800,320C773.3,320,747,320,720,320C693.3,320,667,320,640,320C613.3,320,587,320,560,320C533.3,320,507,320,480,320C453.3,320,427,320,400,320C373.3,320,347,320,320,320C293.3,320,267,320,240,320C213.3,320,187,320,160,320C133.3,320,107,320,80,320C53.3,320,27,320,13,320L0,320Z"></path></svg>
-</section>
-     <!--End Contact-->
-     
-<section id="pathner">
-    <div class="container"> 
-    <div class="row text-center text-secondary mb-3">
-      <div class="col">
-        <h2>Pathner</h2>
-      </div>
-      </div>
-      <div class="row ">
-        <div class="col-md-4 mb3">
-            <div class="card bg-secondary" style="width: 18rem">
-                <a href="https://wax.io"target="_blank">
-            <img src="img/ico_wax.png" class="card-img-top" alt="pathner1" />
-                </a>
-            <div class="card-body text-center">
-               <h2>WAX The KING of NFTs</h2>
-                <p><p>The Worldwide Asset eXchange™ (WAX) is the world’s leading decentralized video game and entertainment network.
-
-                    We deliver the safest and most convenient way to create, buy, sell, and trade virtual items (NFTs) - to anyone, anywhere in the world.</p>
-                   
-            </div>
-          </div>
-        </div>
-
-        <!--img2-->
-        <div class="col-md-4 mb-3">
-          <div class="card bg-secondary" style="width: 18rem">
-            <a href="https://goldmannstaxx.com"target="_blank">
-            <img src="img/ico_gl.png" class="card-img-top" alt="pathner2" /></a>
-            <div class="card-body text-center">
-                <h2>GOLDMANN STAXX</h2>
-                <p>Intergalactic Mission Empowering Digital Consumers
-                    critical thinkers committed to providing practical solutions for digital age consumers stackeholders enjoy exclusive content we remove the noise from cryptocurrency our community represents all walks of life, all interests, and collaborates remotely from all over the globe join us and buckle up, its going to be a fun ride! we are goin to win.</p>
-          </div>
-          </div>
-        </div>
-
-        <!--img3-->
-        <div class="col-md-4 mb-3">
-          <div class="card bg-secondary" style="width: 18rem">
-            <a href="https://tokenhead.io"target="_blank">
-                <img src="img/ico_th.png" class="card-img-top" alt="pathner3" />
-            </a>
-            
-            <div class="card-body text-center">
-                <h2>TOKENHEAD</h2>
-                <p>The most popular NFT app
-                    TokenHead is the best way to organize all of your WAX NFTs and balances in one place. With features geared toward collectors and sellers you’re always a step ahead.
-                </p>
-            </div>
-          </div>
-        </div>
-        </section>
-        
-      
-
-
-     <!--Footer-->
-     <footer class="bg-secondary text-white text-center pb-3">
-        <a href="https://t.me/anonvdigital" target="_blank" class="bi bi-telegram mb3"></a>
-        <a href="https://twitter.com/anonvdigitalart" target="_blank" class="bi bi-twitter mb3"></a>
-        <p>Website create By <a href="https://twitter.com/anonvdigitalart" class="text-white fw-bold">AnonVdigital</a></p> 
-    </footer>
-      <!--End Footer-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxWY7-bLZd-Q4BwdHW0tI_CTxF9-idOs_aHbFVRrN1t-BR2HzeOX8LtTTcLluaL7ZKrHg/exec'
-       const btnsend = document.querySelector('.btn-send');
-       const btnsender = document.querySelector('.btn-sender');
-       const myalert = document.querySelector('.my-alert');
-        const form = document.forms['subcrybe-me']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          // sender submit
-          btnsender.classList.toggle('d-none');
-          btnsend.classList.toggle('d-none');
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                btnsender.classList.toggle('d-none');
-                btnsend.classList.toggle('d-none');
-                myalert.classList.toggle('d-none');
-                //form reset
-                form.reset();
-                console.log('Success!', response);
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+<li> AnonVdigital Official NFT ART - WAX ONLY </li>
+<li> The world's leading decentralized digital </li>
+<li> entertainment network and video games. </li>
+<li> Anonymous is international decentralized </li>
+<li> Activist / collective / hacking</li>
+<li> A movement known to oppose the government. </li>
+<li> Company and control systems.</li>
+<li> This work shows </li>
+<li> That they are all around us </li>
+<li> Because Anonymous is everywhere. </li>
+<li> And they are nowhere to be found.</li>
+<li> They are legions</li>
+<li> Have learned to control reactions to human emotions. </li>
+<li> And not subject to fiat and corruption controls. </li>
+<li> As a reproduction of this work only </li>
+<li> Be an appearance</li>
+<li> Digital NFT that represents the existence of anonymity.</li>
+<li> The owner believes And we agree. </li>
+<li> That this work is quite important </li>
+<li> To be preserved Reproduced. </li>
+<li> And generally available to the public.</li>
+<li> We appreciate your support</li>
+<li> Become an important part </li>
+<li> Of the process of conserving and preserving this knowledge. </li>
+ 
+</ul></center>
+<div id="show"></div>
 </body>
+ 
+<body bgcolor="Black">
+<body bgcolor="#000000">
+<body bgcolor="rgb(0,0,0)">
+ 
 </html>
